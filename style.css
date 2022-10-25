@@ -219,6 +219,10 @@ p {
 	display: none;
 }
 
+.overlay {
+	box-shadow:0 0 0 10000px rgba(0,0,0,.50);
+}
+
 /* start of hamburger menu */
 .menu-btn {
 	display: none;
@@ -242,7 +246,6 @@ p {
 	height: 2px;
 	background-color: black;
 	transform: rotate(0);
-	transition: all 0.5s;
 }
 
 .hamburger-middle {
@@ -285,14 +288,19 @@ p {
 	}	
 
 	.menu-toggle {
-		display: flex;
-		flex-direction: column;
-		gap: 6rem;
+		display: block;
 		background-color: var(--neutral-white);
 		position: fixed;
-		padding: 2rem;
 		inset: 0 0 0 100%;
 		transition: inset 0.2s ease-in;
+	}
+
+	#close-btn {
+		margin: 2.4rem 1.6rem 6rem auto;
+	}
+
+	.menu {
+		padding: 0 1.3rem;
 	}
 
 	.menu-toggle li {
